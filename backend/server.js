@@ -24,6 +24,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
+
+
+console.log("Serving static files from:", path.join(__dirname, "..", "frontend", "dist"));
+
 //  serve files from the frontend/dist folder
 app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
 
