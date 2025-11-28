@@ -24,10 +24,13 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
+//  serve files from the frontend/dist folder
+app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
 
+
+// path to the index.html file
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
 });
 
 server.listen(PORT, () => {
