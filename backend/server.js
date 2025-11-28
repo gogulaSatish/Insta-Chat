@@ -26,11 +26,12 @@ app.use("/api/users", userRoutes);
 
 
 
-console.log("Serving static files from:", path.join(__dirname, "..", "frontend", "dist"));
 
 //  serve files from the frontend/dist folder
 const frontendDistPath= path.resolve(__dirname, "../frontend/dist");
-app.use(express.static(frontendDistPath)
+
+console.log("Serving static files from:", frontendDistPath);
+app.use(express.static(frontendDistPath));
 
 
 // path to the index.html file
