@@ -12,7 +12,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const { authUser } = useAuthContext();
-  const socketUrl = "http://localhost:5000/";
+  const socketUrl = "https://insta-chat-backend.onrender.com";
 
   console.log("checking:", socketUrl);
   useEffect(() => {
