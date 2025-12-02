@@ -8,10 +8,13 @@ const app = express();
 
 const server = http.createServer(app);
 // Configure CORS dynamically based on the environment
-const corsOptions =
-  process.env.NODE_ENV === "production"
-    ? { origin: process.env.PRODUCTION_URL } // Production URL
-    : { origin: process.env.FRONTEND_URL }; // Local development URL
+const corsOptions = {
+  origin:
+    process.env.NODE_ENV === "production"
+      ? process.env.PRODUCTION_URL || process.env.RENDER_EXTERNAL_URL
+      : process.env.FRONTEND_URL || "http://localhost:3000",
+  credentials: true,
+};
 
 const io = new Server(server, { cors: corsOptions });
 

@@ -12,7 +12,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const { authUser } = useAuthContext();
-  const socketUrl = "http://localhost:5000/";
+  const socketUrl = import.meta.env.VITE_SOCKET_URL || window.location.origin;
 
   console.log("checking:", socketUrl);
   useEffect(() => {
