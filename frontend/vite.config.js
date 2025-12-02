@@ -4,6 +4,9 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
+	build: {
+    outDir: 'src'  // Builds to frontend/src/ instead of frontend/dist/
+  },
 	server: {
 		port: "https://insta-chat-frontend.onrender.com",
 		proxy: {
