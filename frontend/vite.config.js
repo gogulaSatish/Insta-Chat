@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	plugins: [react()],
 	build: {
-    outDir: 'src'  // Builds to frontend/src/ instead of frontend/dist/
+    outDir: 'src/dist'  // Builds to frontend/src/ instead of frontend/dist/
   },
 	server: {
 		port: "https://insta-chat-frontend.onrender.com",
