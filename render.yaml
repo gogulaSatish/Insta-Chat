@@ -1,6 +1,5 @@
 services:
   - type: web
-    name: instachat-backend
     env: node
     region: ohio
     plan: free
@@ -13,5 +12,3 @@ services:
         scope: project
       - key: JWT_SECRET
         scope: project
-      - key: PRODUCTION_URL
-        value: https://instachat-backend.onrender.com
