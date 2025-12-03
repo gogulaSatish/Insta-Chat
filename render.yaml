@@ -3,7 +3,9 @@ services:
     env: node
     region: ohio
     plan: free
-    buildCommand: npm install && npm install --prefix frontend && npm run build --prefix frontend
+    # Install root deps, then install frontend deps including devDependencies so Vite is available,
+    # then build the frontend.
+    buildCommand: npm install && npm install --prefix frontend --include=dev && npm run build --prefix frontend
     startCommand: node backend/server.js
     envVars:
       - key: NODE_ENV
