@@ -15,10 +15,3 @@ services:
         scope: project
       - key: PRODUCTION_URL
         value: https://instachat-backend.onrender.com
-    staticSite:
-      buildDirectory: frontend/dist
-      routes:
-        - path: /
-          destination: /index.html
-        - path: /*
-          destination: /index.html
