@@ -11,8 +11,22 @@ node_modules
 dist
 dist-ssr
 *.local
-RESPONSIVE_DESIGN_CHANGES.md
 .env
+
+# Documentation files (for reference only, not needed in deployment)
+RESPONSIVE_DESIGN_CHANGES.md
+DEPLOYMENT_SUMMARY.md
+DOCUMENTATION_INDEX.md
+DOCUMENTATION_MAP.md
+FINAL_SUMMARY.md
+PRE_DEPLOYMENT_CHECKLIST.md
+PROJECT_SCAN_COMPLETE.md
+QUICK_DEPLOY.md
+QUICK_REFERENCE.md
+RENDER_DEPLOYMENT_GUIDE.md
+START_HERE.md
+TROUBLESHOOTING.md
+README_NEW.md
 
 # Editor directories and files
 .vscode/*

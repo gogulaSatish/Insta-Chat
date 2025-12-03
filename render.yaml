@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: instachat-backend
+    env: node
+    region: ohio
+    plan: free
+    buildCommand: npm install && npm install --prefix frontend && npm run build --prefix frontend
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_DB_URI
+        scope: project
+      - key: JWT_SECRET
+        scope: project
+      - key: PRODUCTION_URL
+        value: https://instachat-backend.onrender.com
+    staticSite:
+      buildDirectory: frontend/dist
+      routes:
+        - path: /
+          destination: /index.html
+        - path: /*
+          destination: /index.html
